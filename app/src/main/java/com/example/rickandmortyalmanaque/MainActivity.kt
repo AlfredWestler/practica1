@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.rickandmortyalmanaque.ui.theme.RickAndMortyAlmanaqueTheme
+import com.example.rickandmortyalmanaque.presentation.ui.theme.RickAndMortyAlmanaqueTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

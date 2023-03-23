@@ -38,6 +38,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     RickAndMortyAlmanaqueTheme {
-        Greeting("Android")
+        Greeting("Android ")
     }
 }

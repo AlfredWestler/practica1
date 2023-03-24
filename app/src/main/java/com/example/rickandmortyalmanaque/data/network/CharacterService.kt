@@ -37,7 +37,7 @@ class CharacterService {
             charactersList.clear()
             charactersList.addAll(it1.results)
             allCharactersList.addAll(charactersList)
-            if (it1.info.next.isNotEmpty()){
+            if (!it1.info.next.isNullOrEmpty()){
                 it1.info.next.let { getPaginationCharacters(it.replace(BASE_URL, "")) }
             }
         }

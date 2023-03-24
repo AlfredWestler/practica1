@@ -29,7 +29,6 @@ fun MainNavigationGraph(
             )
         }
         composable(MainDestinations.CHARACTER_DETAIL.name) {
-//            DemoDatastore(onClick = onClick, vm = vm)
             CharacterDetailScreen(onClick, viewModel)
         }
     }

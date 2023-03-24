@@ -27,7 +27,7 @@ fun CharactersScreen(
                 viewModel.data.value.forEach {character ->
                     CharacterItem(urlImage = character.image, characterName = character.name){
                         viewModel.setCharacter(character)
-                        Toast.makeText(context,it,Toast.LENGTH_SHORT).show()
+                        navigateToDetail(it)
                     }
                 }
             }

@@ -24,6 +24,7 @@ fun CharacterDetailScreen(
     onClick: (MainDestinations) -> Unit,
     viewModel: MortyModel
 ) {
+
     Scaffold(
         topBar = {
             GSBCToolBar(
@@ -43,7 +44,7 @@ fun CharacterDetailScreen(
                     .height(300.dp)
                     .padding(horizontal = 20.dp)
                     .padding(top = 30.dp),
-                imageModel = "https://rickandmortyapi.com/api/character/avatar/361.jpeg",
+                imageModel = viewModel.selected.value?.image,
                 contentScale = ContentScale.FillWidth,
                 failure = {
                     Box(Modifier.fillMaxSize().background(Color.Red))
@@ -56,19 +57,19 @@ fun CharacterDetailScreen(
             )
             Text(
                 modifier = Modifier.padding(top = 10.dp, start = 20.dp),
-                text = "Rick negativo"
+                text = viewModel.selected.value?.name.orEmpty()
             )
             Text(
                 modifier = Modifier.padding(top = 10.dp, start = 20.dp),
-                text = "Alive"
+                text = viewModel.selected.value?.status.orEmpty()
             )
             Text(
                 modifier = Modifier.padding(top = 10.dp, start = 20.dp),
-                text = "Human"
+                text = viewModel.selected.value?.species.orEmpty()
             )
             Text(
                 modifier = Modifier.padding(top = 10.dp, start = 20.dp),
-                text = "Male"
+                text = viewModel.selected.value?.gender.orEmpty()
             )
         }
     }

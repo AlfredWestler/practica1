@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.rickandmortyalmanaque.CharacterItem
+import com.example.rickandmortyalmanaque.presentation.ui.components.CharactersScreen
 
 @Composable
 fun MainNavigationGraph(
@@ -18,9 +20,11 @@ fun MainNavigationGraph(
 
     NavHost(navController = navController, startDestination = MainDestinations.ALL_CHARACTERS.name) {
         composable(MainDestinations.ALL_CHARACTERS.name) {
-//            DemoDatastore(onClick = onClick, vm = vm)
+            CharactersScreen(){
+                onClick(MainDestinations.CHARACTER_DETAIL)
+            }
         }
-        composable(MainDestinations.ALL_CHARACTERS.name) {
+        composable(MainDestinations.CHARACTER_DETAIL.name) {
 //            DemoDatastore(onClick = onClick, vm = vm)
         }
     }

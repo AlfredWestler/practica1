@@ -4,13 +4,14 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.rickandmortyalmanaque.CharacterItem
+import com.example.rickandmortyalmanaque.presentation.modules.detail.CharacterDetailScreen
 import com.example.rickandmortyalmanaque.presentation.ui.components.CharactersScreen
+import com.example.rickandmortyalmanaque.ui.MortyModel
 
 @Composable
 fun MainNavigationGraph(
     navController: NavHostController,
-//    viewModel: DemoViewModel = hiltViewModel(),
+    viewModel: MortyModel,
 ) {
     val onClick: (MainDestinations) -> Unit = {
         navController.navigate(it.name) {
@@ -26,6 +27,7 @@ fun MainNavigationGraph(
         }
         composable(MainDestinations.CHARACTER_DETAIL.name) {
 //            DemoDatastore(onClick = onClick, vm = vm)
+            CharacterDetailScreen(onClick, viewModel)
         }
     }
 }

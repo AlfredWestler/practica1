@@ -21,9 +21,12 @@ fun MainNavigationGraph(
 
     NavHost(navController = navController, startDestination = MainDestinations.ALL_CHARACTERS.name) {
         composable(MainDestinations.ALL_CHARACTERS.name) {
-            CharactersScreen(){
-                onClick(MainDestinations.CHARACTER_DETAIL)
-            }
+            CharactersScreen(
+                viewModel = viewModel,
+                navigateToDetail = {
+                    onClick(MainDestinations.CHARACTER_DETAIL)
+                }
+            )
         }
         composable(MainDestinations.CHARACTER_DETAIL.name) {
 //            DemoDatastore(onClick = onClick, vm = vm)

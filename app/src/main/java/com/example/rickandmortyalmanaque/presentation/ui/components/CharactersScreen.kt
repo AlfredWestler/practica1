@@ -11,19 +11,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.example.rickandmortyalmanaque.CharacterItem
+import com.example.rickandmortyalmanaque.ui.MortyModel
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun CharactersScreen(
-    navigateToDetail: (character: String)-> Unit
+    navigateToDetail: (character: String)-> Unit,
+    viewModel: MortyModel
 ){
     val context = LocalContext.current
     val listCharacters = listOf("1","2","3")
     Scaffold (
         content = { paddingValues ->
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                listCharacters.forEach {
-                    CharacterItem(urlImage = "", characterName = it){
+                viewModel.data.value.forEach {character ->
+                    CharacterItem(urlImage = character.image, characterName = character.name){
+                        viewModel.setCharacter(character)
                         Toast.makeText(context,it,Toast.LENGTH_SHORT).show()
                     }
                 }

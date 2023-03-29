@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -75,4 +76,11 @@ dependencies {
     implementation "com.google.maps.android:maps-compose:1.0.0"
     implementation "com.google.android.gms:play-services-maps:18.1.0"
     implementation "com.google.android.gms:play-services-location:20.0.0"
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+    // Firebase UI
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
 }

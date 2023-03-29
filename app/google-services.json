@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "981963043491",
+    "project_id": "almanaque-53744",
+    "storage_bucket": "almanaque-53744.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981963043491:android:7d93257559ad60f8134516",
+        "android_client_info": {
+          "package_name": "com.example.rickandmortyalmanaque"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981963043491-a0uifn94ansb4bp2helic7o3ni3601bj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rickandmortyalmanaque",
+            "certificate_hash": "ddc9e2a0fe8b11916e3760f8e75a3caa5ca867f0"
+          }
+        },
+        {
+          "client_id": "981963043491-b0262s2ui36fi6fdj3glvski532k76a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAid6ahOEf7q7M5XcK2uEH3NsIw9GqVs5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981963043491-b0262s2ui36fi6fdj3glvski532k76a8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

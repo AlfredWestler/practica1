@@ -12,10 +12,13 @@ import androidx.navigation.compose.rememberNavController
 import com.example.rickandmortyalmanaque.presentation.modules.MainNavigationGraph
 import com.example.rickandmortyalmanaque.presentation.ui.theme.RickAndMortyAlmanaqueTheme
 import com.example.rickandmortyalmanaque.ui.MortyModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private val vm: MortyModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         vm.detail()
